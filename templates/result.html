@@ -1,0 +1,39 @@
+<html>
+<head>
+    <style>
+        body{background-color: powderblue;}
+		.header,table{
+		background-color:red;
+		display:block;
+		width:700px;
+		margin:25px auto;
+		border-radius:8px;
+		text-align:center;color:white
+		}
+    </style>
+</head>
+<body>
+
+  <div class="table-users">
+   <div class="header" style="width:200px;display:block,margin:5px auto">Reviews</div>
+
+   <table cellspacing="2" border="1">
+      <tr>
+         <th>Product</th>
+         <th>Name</th>
+         <th>Rating</th>
+         <th>Comment Heading</th>
+         <th width="230">Comments</th>
+      </tr>
+         {% for review in reviews %}
+      <tr>
+          <td>{{review['Product']}}</td>
+          <td>{{review['Name']}}</td>
+          <td>{{review['Rating']}}</td>
+          <td>{{review['commentHead']}}</td>
+          <td>{{review['Comments']}} </td>
+       {% endfor %}
+   </table>
+</div>
+</body>
+</html>
